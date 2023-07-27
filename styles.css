@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+
+#navbar{
+    background-color: #BE3144;
+    position: fixed;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0px;
+    /* padding: 12px 0px; */
+}
+
+ul{
+    list-style: none;
+}
+
+.nav-links li a{
+    color: azure;
+    font-family: 'Poppins', sans-serif;
+    font-size: .9em;
+    text-decoration: none;
+    padding: 12px;
+    display: inline-block;
+    transition: background-color .2s ease-in-out;
+}
+
+.nav-links li a:hover{
+    background-color: #45567D;
+}
+
+#welcome-section{
+    height: 100vh;
+    background-color: #242426;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-section{
+    text-align: center;
+}
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.2rem;
+    color: azure;
+    margin-bottom: 5px;
+}
+
+#hero-section{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: #BE3144;
+}
+
+#projects{
+    background-color: #45567D;
+    padding: 60px 15px 30px;
+}
+
+#project-text{
+    border-bottom: 1.5px solid white;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px;
+    color: azure;
+    font-size: 1.8rem;
+}
+
+#projects-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+#projects-grid a .image{
+    width: 100%;
+    height: 250px;
+    object-fit: fill;
+    overflow: hidden;
+}
+
+#projects-grid a img{
+    width: 100%;
+    min-height: 250px;
+    height: 100%;
+}
+
+.project-tile{
+    background-color: #303841;
+    text-decoration: none;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.project-title{
+    font-family: 'Poppins', sans-serif;
+    color: azure;
+    font-size: .8em;
+    text-align: center;
+    /* border: 2px solid red; */
+    margin: 10px auto;
+}
+
+.project-title #code{
+    color: #942b39;
+    font-size: 1rem;
+    height: 20px;
+    font-weight: 500;
+    opacity: 0;
+}
+
+.project-tile:hover #code{
+    opacity: 1;
+}
+
+.show-all{
+    display: block;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto 30px;
+    text-decoration: none;
+    padding: 8px 15px;
+    background-color: #303841;
+    color: azure;
+    font-family: 'Poppins', sans-serif;
+    font-size: .8rem;
+    transition: all .3s ease-in-out;
+}
+
+.show-all:hover{
+    background-color: #BE3144;
+}
+
+.show-all:hover #arrow{
+    transform: translateX(2px);
+    transition: all .3s ease-in-out;
+}
+
+#contact{
+    padding: 80px 20px 70px;
+    background-color: #303841;
+}
+
+#contact h1{
+    text-align: center;
+}
+
+#contact p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: .8rem;
+    color: azure;
+    text-align: center;
+}
+
+#social-links{
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px auto;
+    /* border: 2px solid red; */
+    gap: 20px;
+}
+
+#social-links a{
+    text-decoration: none;
+    color: azure;
+    font-family: 'Poppins', sans-serif;
+    font-size: .9rem;
+}
+
+#social-links li:hover{
+    transform: translateY(10px);
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#social-links li{
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+}
+
+#social-links li i{
+    margin-right: 5px;
+}
+
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: #BE3144;
+}
+
+footer{
+    background-color: #303841;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+footer p, footer a{
+    color: azure;
+    font-size: .8rem;
+    text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 748px) {
+    #projects-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #projects-grid{
+        grid-template-columns: 1fr;
+    }
+
+    h1{
+        font-size: 1.9rem;
+    }
+
+    h2{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 357px) {
+    
+    #projects-grid a img{
+        height: 250px;
+    }
+}
